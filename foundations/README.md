@@ -7,4 +7,9 @@ The engine is a runtime environment that is provided by the browser like the LVM
 * engines usually convert js to an intermediate bytecode which is then converted to machine code
 * engines use JIT compilers to speed up execution and reduce compile time and provide scope for optimisation 
 * the jit compiler in v8 is called tubofan 
-* 
+* Javascript is a garbage collected language and it uses the mark and sweep algorithm that maintains reference counts 
+* memory leaks usually happen when we use too many global variables, event listeners
+* javascript is considered to be single threaded 
+* the javascript runtime provides a web api for dom manipulation and many other functions
+* setTImeOut() works by calling the web api then starting a timer in the the js runtime when the timer expires the callback is placed into the callback queue the event loop check if the call stack is empty and only then feeds in the callbacks waiting in the callback queue
+* node.js is a js runtime which is the first to use js outside of the browser 
