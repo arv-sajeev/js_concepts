@@ -13,3 +13,34 @@ The engine is a runtime environment that is provided by the browser like the LVM
 * the javascript runtime provides a web api for dom manipulation and many other functions
 * setTImeOut() works by calling the web api then starting a timer in the the js runtime when the timer expires the callback is placed into the callback queue the event loop check if the call stack is empty and only then feeds in the callbacks waiting in the callback queue
 * node.js is a js runtime which is the first to use js outside of the browser 
+
+## 3. Execution context and Scope
+
+* the scope in which the code is running is called the execution context and it exists for each function call 
+* lexical context is like the location in the code that an execution context belongs to
+
+## 4. Hoisting 
+
+* when a new execution context is encountered  during compile time the variable definitions of the context are hoisted to the top, and the variables are assigned the value undefined
+* function definitions are completely hoisted
+* function expressions are considered to be variables and hence are declared but not defined so can't be called until they are assigned a function 
+* the hoisting process is done by a single pass done to allocate memory 
+* variable names are within execution contexts
+* we can avoid hoisting by not using var and using let and const
+
+## 5. Function invocation 
+
+* when a function is invoked we create a new execution context and we get a `this` and `arguments` object with it
+* arguments are given in a sort of dictionary structure we can convert it to an array using `Array.from(arguments)`
+* the spread operator `...args` in js are used for variable args functions and has a length property to access them.
+
+* the scopes chained to function are available in the function object using [[scopes]]
+* in js if a function expressions function has a name, the function will be assigned to it own scope within the function and will now be visible outside
+* JS uses function scope for var 
+* **let** and **const** use block scope
+
+## 6. IIFE or immediately invoked function expression 
+
+* is a common design pattern to organize the namespace
+* used before es modules
+*  
