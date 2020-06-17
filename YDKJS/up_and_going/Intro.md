@@ -28,9 +28,10 @@ console.log("ban" + + "na")
 * there are no strict inequality rules though 
 
 ## 4. Strict mode
-* was added in ES5 to add stricter rules for certain behaviours, it also makes code more optimizable
+* was added in ES5 to add stricter rules for certain behaviours, it also makes code more optimizeable
 * this can be used to disallow the auto global variable declaration omitting var
 * just reduces bugs since the compiler finds probable places for errors
+* you can also use strict mode for within a scope or an entire file
 
 ## 5. Functions as values
 
@@ -44,7 +45,7 @@ console.log("ban" + + "na")
 * short for immediately invoked function expressions
 * the function definition is surrounded by parenthesis to prevent it from being treated as a function declaration 
 * and then they are called right where they are defined
-* it is usually used to scope variabels that won't affect the surrounding code
+* it is usually used to scope variables that won't affect the surrounding code
 * they can return values like normal functions do 
 
 ## 7. Closure
@@ -54,4 +55,8 @@ console.log("ban" + + "na")
 
 ## 8. this identifier
 * it points to object that called the function that is in the current scope
-* 
+* it doesn't only depend on the function that was called but also how it was called
+
+## 9. Prototypes 
+* when you reference a property of an object if it doesn't exist
+* using the prototype reference provided for the object a value is assigned
